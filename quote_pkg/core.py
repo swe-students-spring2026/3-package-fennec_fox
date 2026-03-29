@@ -1,11 +1,15 @@
 import random
-from data import quotes
+from .data import quotes
 
 def QuoteByCategory(category):
+    """
+    Function for choosing a random quote of a certain category. 
+    the possible categories are: motivational, historical, funny, reflective, kindness
+    """
     matches =[
         quote["text"]
         for quote in quotes
-        if quote["category"] == category
+        if quote["category"].lower() == category.lower()
     ]
     if not matches:
         raise ValueError("Category not found")
