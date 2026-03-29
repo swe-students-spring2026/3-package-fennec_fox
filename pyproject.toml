@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fennec-fox-quotes"
+version = "0.1.0"
+description = "A lighthearted quote package."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Fennec Fox Team" }
+]
+license = { file = "LICENSE" }
+dependencies = []
+
+[tool.setuptools]
+packages = ["quote_pkg"]
