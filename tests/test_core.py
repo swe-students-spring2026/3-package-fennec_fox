@@ -23,3 +23,15 @@ def test_case_insensitive_category():
     result2 = core.QuoteByCategory("MOTIVATIONAL")
     assert isinstance(result1, str)
     assert isinstance(result2, str)
+
+# QuoteByEmotion tests
+
+def test_quote_by_emotion_scenarios_return_string():
+    for emotion in ["sad", "happy", "anger", "fear"]:
+        result = core.QuoteByEmotion(emotion)
+        assert isinstance(result, str)
+        assert len(result) > 0
+
+def test_quote_by_emotion_invalid_emotion_raises():
+    with pytest.raises(ValueError, match="Emotion not found"):
+        core.QuoteByEmotion("unknown_emotion")
