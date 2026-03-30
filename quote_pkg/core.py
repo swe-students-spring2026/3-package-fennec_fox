@@ -64,12 +64,18 @@ def QuoteByEmotion(emotion):
         "fear": {"confident", "resilient", "hopeful", "determined"}
     }
 
-    target_emotions = emotion_scenarios.get(normalized_emotion, {normalized_emotion})
-    matches =[
-        quote["text"]
-        for quote in quotes
-        if quote.get("emotion", "").lower() in target_emotions
-    ]
+    if normalized_emotion in emotion_scenarios:
+        allowed_emotions = emotion_scenarios[normalized_emotion]
+    else:
+        allowed_emotions = {normalized_emotion}
+
+    matches = []
+    for quote in quotes:
+        quote_emotion = quote.get("emotion", "").lower()
+        if quote_emotion in allowed_emotions:
+            matches.append(quote["text"])
+
     if not matches:
         raise ValueError("Emotion not found")
+    
     return random.choice(matches)
