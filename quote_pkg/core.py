@@ -48,3 +48,28 @@ def QuoteRandom() -> str:
         ValueError("invalid quote text")
 
     return random_quote
+
+def QuoteByEmotion(emotion):
+    if not isinstance(emotion, str):
+        raise ValueError("Emotion must be a non-empty string")
+
+    normalized_emotion = emotion.strip().lower()
+    if not normalized_emotion:
+        raise ValueError("Emotion must be a non-empty string")
+
+    emotion_scenarios = {
+        "sad": {"healing", "thoughtful", "contemplative", "serious"},
+        "happy": {"playful", "light", "witty", "positive", "warm", "calm", "kind", "compassionate"},
+        "madness": {"sarcastic", "witty", "playful", "determined", "focused"},
+        "fear": {"confident", "resilient", "hopeful", "determined"}
+    }
+
+    target_emotions = emotion_scenarios.get(normalized_emotion, {normalized_emotion})
+    matches =[
+        quote["text"]
+        for quote in quotes
+        if quote.get("emotion", "").lower() in target_emotions
+    ]
+    if not matches:
+        raise ValueError("Emotion not found")
+    return random.choice(matches)

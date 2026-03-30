@@ -1,1 +1,1 @@
-from .core import QuoteByCategory, QuoteByAuthor, QuoteRandom
+from .core import QuoteByCategory, QuoteByAuthor, QuoteRandom, QuoteByEmotion
