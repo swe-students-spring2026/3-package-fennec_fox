@@ -27,7 +27,7 @@ def test_case_insensitive_category():
 # QuoteByEmotion tests
 
 def test_quote_by_emotion_scenarios_return_string():
-    for emotion in ["sad", "happy", "anger", "fear"]:
+    for emotion in ["sad", "happy", "madness", "fear"]:
         result = core.QuoteByEmotion(emotion)
         assert isinstance(result, str)
         assert len(result) > 0
