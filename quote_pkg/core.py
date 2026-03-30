@@ -1,5 +1,5 @@
 import random
-from data import quotes
+from .data import quotes
 
 def QuoteByCategory(category):
     matches =[
