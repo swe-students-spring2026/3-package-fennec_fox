@@ -36,16 +36,16 @@ def QuoteByAuthor(author):
 def QuoteRandom() -> str:
 
     if len(quotes) == 0:
-        ValueError("quote list is empty")
+        raise ValueError("quote list is empty")
 
     random_obj: object = random.choice(quotes)
     random_quote: str = random_obj["text"];
 
     if random_quote == None:
-        ValueError("invalid quote object")
+        raise ValueError("invalid quote object")
 
     if not isinstance(random_quote, str):
-        ValueError("invalid quote text")
+        raise ValueError("invalid quote text")
 
     return random_quote
 
