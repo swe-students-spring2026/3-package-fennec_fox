@@ -1,9 +1,6 @@
 name: automated test
 
 on:
-  workflow_dispatch:
-  push:
-    branches: [feature/github-action-test]
   pull_request:
     branches: [main]
 
