@@ -31,7 +31,9 @@ def QuoteByAuthor(author):
     return random.choice(matches)
   
 def QuoteRandom() -> str:
-
+    """
+    Function for choosing random quote from all quotes.
+    """
     if len(quotes) == 0:
         raise ValueError("quote list is empty")
 
