@@ -14,12 +14,12 @@ pip install fennec-fox-quotes
 ```
 
 ## Usage
-[Example program]()
+[Example program](/example.py)
 
 You can import the package to a program using:
 
 ```python
-import fennec-fox-quotes
+import quote_pkg
 ```
 
 ## Documentation
@@ -27,7 +27,7 @@ import fennec-fox-quotes
 ```QuoteByCategory(category)``` chooses a random quote of a certain category. The possible categories are: motivational, historical, funny, reflective and kindness.
 
 ```python
-import fennec-fox-quotes as quote
+import quote_pkg as quote
 
 print(quote.QuoteByCategory('motivational'))
 # An example output would be:
@@ -37,7 +37,7 @@ print(quote.QuoteByCategory('motivational'))
 ```QuoteByAuthor(author)``` chooses a random quote of a certain author. The search is partially-matched and case insensitive.
 
 ```python
-import fennec-fox-quotes as quote
+import quote_pkg as quote
 
 print(quote.QuoteByAuthor('roosevelt'))
 # An example output would be:
@@ -46,7 +46,7 @@ print(quote.QuoteByAuthor('roosevelt'))
 
 ```QuoteRandom()``` gives a completely random quote from the database.
 ```python
-import fennec-fox-quotes as quote
+import quote_pkg as quote
 
 print(quote.QuoteRandom())
 # Outputs a random quote
@@ -62,7 +62,7 @@ print(quote.QuoteRandom())
 | fear | confident, resilient, hopeful, determined |
 
 ```python
-import fennec-fox-quotes as quote
+import quote_pkg as quote
 
 print(quote.QuoteByEmotion('sad'))
 # Output a random quote of one of the following categories: healing, thoughtful, contemplative, serious
@@ -74,7 +74,7 @@ print(quote.QuoteByEmotion('positive'))
 ## Environment, Building and Testing
 
 ### Prerequisites
-- Python 3.14
+- Python 3.13 or 3.14
 - pipenv
 
 1. Clone the repository:
