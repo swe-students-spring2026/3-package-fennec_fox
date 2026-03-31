@@ -1,6 +1,6 @@
 # fennec-fox-quotes
 
-[Badges]
+[![automated test](https://github.com/swe-students-spring2026/3-package-fennec_fox/actions/workflows/automated-test.yml/badge.svg)](https://github.com/swe-students-spring2026/3-package-fennec_fox/actions/workflows/automated-test.yml)
 
 Fennec-fox-quotes is a python package that selects random quotes from a database by category, author or emotion.
 
@@ -105,7 +105,7 @@ python -m build
 This package does not require and environment variables to run. To modify the database, modifiy [data.py](/quote_pkg/data.py).
 
 ## Teammates
-[](https://github.com/tx715)
+[Tao Xie](https://github.com/tx715)
 
 [Han Xiao](https://github.com/vick12333)
 
@@ -113,4 +113,4 @@ This package does not require and environment variables to run. To modify the da
 
 [Tim Xu](https://github.com/TimXu2006)
 
-[](https://github.com/jbx202)
+[Jaiden Xu](https://github.com/jbx202)
