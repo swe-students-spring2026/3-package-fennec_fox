@@ -3,34 +3,34 @@ import quote_pkg as quote
 #our package ^
 
 def main():
-    # QuoteByCategory examples
+    # QuoteByCategory quick examples
     print("QuoteByCategory")
-    print("Categories include: motivational, historical, funny, reflective, and kindness.")
+    print("Available categories: motivational, historical, funny, reflective, and kindness.")
 
     category_1 = quote.QuoteByCategory("motivational")
-    print("motivational example:", category_1)
+    print("motivational sample:", category_1)
     category_2 = quote.QuoteByCategory("historical")
-    print("historical example:", category_2)
+    print("historical sample:", category_2)
     category_3 = quote.QuoteByCategory("funny")
-    print("funny example:", category_3)
+    print("funny sample:", category_3)
     category_4 = quote.QuoteByCategory("reflective")
-    print("reflective example:", category_4)
+    print("reflective sample:", category_4)
     category_5 = quote.QuoteByCategory("kindness")
-    print("kindness example:", category_5)
+    print("kindness sample:", category_5)
 
-    # QuoteByAuthor examples
+    # QuoteByAuthor quick examples
     print("\nQuoteByAuthor")
-    print("Author search is partial and case-insensitive.")
+    print("Author lookup is case insensitive.")
 
     author_1 = quote.QuoteByAuthor("roosevelt")
-    print("roosevelt example:", author_1)
+    print("roosevelt sample:", author_1)
     author_2 = quote.QuoteByAuthor("Aristotle")
-    print("Aristotle example:", author_2)
-    author_3 = quote.QuoteByAuthor("unknown author")
-    if author_3 == -1:
-        print("unknown author example: no match found (returned -1)")
-    else:
-        print("unknown author example:", author_3)
+    print("Aristotle sample:", author_2)
+    try:
+        author_3 = quote.QuoteByAuthor("unknown author")
+        print("unknown author sample:", author_3)
+    except ValueError as error:
+        print("unknown author sample:", error)
 
     # QuoteRandom examples
     print("\nQuoteRandom")
@@ -46,6 +46,11 @@ def main():
     # QuoteByEmotion examples
     print("\nQuoteByEmotion")
     print("Supports scenario words and direct emotion labels.")
+    print("Scenario inputs: sad, happy, madness, fear.")
+    print("Direct emotion inputs: inspired, hopeful, determined, " \
+    "focused, thoughtful, resilient, confident, serious, playful, " \
+    "sarcastic, light, witty, contemplative, calm, healing, warm, " \
+    "compassionate, kind, positive.")
 
     print("\nScenario-based emotion inputs:")
     emotion_1 = quote.QuoteByEmotion("sad")

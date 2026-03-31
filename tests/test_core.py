@@ -32,6 +32,13 @@ def test_quote_by_emotion_scenarios_return_string():
         assert isinstance(result, str)
         assert len(result) > 0
 
+
+def test_quote_by_specific_emotions_return_string():
+    for emotion in ["positive", "playful", "thoughtful", "resilient"]:
+        result = core.QuoteByEmotion(emotion)
+        assert isinstance(result, str)
+        assert len(result) > 0
+
 def test_quote_by_emotion_invalid_emotion_raises():
     with pytest.raises(ValueError, match="Emotion not found"):
         core.QuoteByEmotion("unknown_emotion")
