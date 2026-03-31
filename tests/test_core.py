@@ -66,3 +66,19 @@ def test_quote_random_non_string_text_raise_value_error(monkeypatch):
     monkeypatch.setattr(core.random, "choice", lambda seq: seq[0])
     with pytest.raises(ValueError, match="invalid quote text"):
         core.QuoteRandom()
+
+
+# QuoteByAuthor tests
+
+def test_quote_by_author_returns_string():
+    result = core.QuoteByAuthor("Abraham Lincoln")
+    assert isinstance(result, str)
+
+def test_quote_by_author_returns_non_empty():
+    result = core.QuoteByAuthor("Abraham Lincoln")
+    assert len(result) > 0
+
+def test_quote_by_author_partial_match():
+    result = core.QuoteByAuthor("LiNcOlN")
+    assert isinstance(result, str)
+    assert len(result) > 0

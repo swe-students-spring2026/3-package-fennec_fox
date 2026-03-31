@@ -19,9 +19,6 @@ def QuoteByAuthor(author):
     """
     Function for choosing random quote of a given author.
     The search is partially-match and case insensitive.
-
-    :param author: The author to search for
-    :return: A quote of the author if there is at least one match, or -1 if there is none
     """
     author = author.strip().lower()
     matches = [
@@ -30,7 +27,7 @@ def QuoteByAuthor(author):
         if author in quote.get('author', '').lower()
     ]
     if not matches:
-        return -1
+        raise ValueError("Author not found")
     return random.choice(matches)
   
 def QuoteRandom() -> str:
