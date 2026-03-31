@@ -6,7 +6,7 @@ Fennec-fox-quotes is a python package that selects random quotes from a database
 
 ## Installation
 
-[Our Pypl](https://pypi.org/project/fennec-fox-quotes/0.1.0/)
+[Our Pypl](https://pypi.org/project/fennec-fox-quotes/0.1.1/)
 
 Install ```fennec-fox-quotes``` with pip:
 ```
