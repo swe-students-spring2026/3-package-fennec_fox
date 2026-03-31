@@ -105,6 +105,7 @@ python -m build
 This package does not require and environment variables to run. To modify the database, modifiy [data.py](/quote_pkg/data.py).
 
 ## Teammates
+
 [Tao Xie](https://github.com/tx715)
 
 [Han Xiao](https://github.com/vick12333)
